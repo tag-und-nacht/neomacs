@@ -1533,7 +1533,8 @@ fn char_width_bold_vs_normal() {
     assert!(w_bold > 0.0, "bold width should be positive");
 }
 
-#[cfg(unix)]
+// `FontconfigBackend` exists only on Linux; macOS is `unix` too.
+#[cfg(target_os = "linux")]
 #[test]
 fn installed_iosevka_digit_advance_is_fixed_across_weights() {
     let resolver = crate::font::resolver::FontResolver::new(Box::new(
