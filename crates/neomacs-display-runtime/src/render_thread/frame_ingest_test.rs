@@ -122,7 +122,7 @@ fn removing_the_newest_child_advances_the_host_scene_revision() {
 }
 
 /// GNU sizes the native view from the widget (`xww->width`) and clips it to
-/// the text area (`x_draw_xwidget_glyph_string`, src/xwidget.c:2841-2847,
+/// the text area (`x_draw_xwidget_glyph_string`, src/xwidget.c:2841-2849,
 /// emacs-31.0.90); the glyph's cropped advance is not the view's size.  A
 /// 600 px page cropped to a 304 px slot is therefore a 600 px viewport behind
 /// a 304 px clip, not a 304 px viewport.
